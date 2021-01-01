@@ -3,6 +3,7 @@ const exphbs  = require('express-handlebars');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
+const PORT = process.env.PORT || 5000;
 
 
 
@@ -52,8 +53,8 @@ app.delete('/mangas/:id', function (req, res) {
 
 app.use(express.static('public'));
 
-app.listen(3000, function () {
-    console.log('Votre app est disponible sur localhost:3000 !')
+app.listen(PORT, function () {
+    console.log(`Votre app est disponible sur localhost:${PORT} !`)
 });
 
 
