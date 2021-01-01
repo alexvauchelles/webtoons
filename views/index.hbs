@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link href="styles.css" rel="stylesheet">
+
+	<title>Meilleurs webtoons</title>
+</head>
+<body>
+    
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mes webtoons préférés</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<main class="container">
+	<div class="row">
+		{{#each mangas}}
+			<div class="col-12 col-md-6 col-lg-4 card-manga-container">
+				<div class="card card-manga">
+					<img src="{{this.picture_url}}" class="card-img-top" alt="...">
+					<div class="card-body card-body-manga">
+						<h5 class="card-title">{{this.title}}</h5>
+						<p class="card-text">{{this.description}}</p>
+						<a href="{{this.url}}" class="btn btn-primary" target="_blank">Lire le premier épisode</a>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+</main>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+</body>
+</html>

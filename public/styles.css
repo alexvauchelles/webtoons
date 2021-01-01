@@ -1,0 +1,17 @@
+.card-manga-container {
+	display: flex;
+}
+
+.card-manga {
+	margin: 5px;
+	flex: 1;
+}
+
+.card-body-manga {
+	display: flex;
+	flex-flow: column;
+}
+
+.card-text {
+	flex: 1;
+}
